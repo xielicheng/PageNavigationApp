@@ -1,0 +1,94 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
+	</ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Statics\Fonts\Rubik-Medium.ttf" />
+    <None Remove="Statics\Fonts\Rubik-Regular.ttf" />
+    <None Remove="Statics\Images\customer_page.png" />
+    <None Remove="Statics\Images\home_page.png" />
+    <None Remove="Statics\Images\img_customer.png" />
+    <None Remove="Statics\Images\img_home.png" />
+    <None Remove="Statics\Images\img_order.png" />
+    <None Remove="Statics\Images\img_product.png" />
+    <None Remove="Statics\Images\img_setting.png" />
+    <None Remove="Statics\Images\img_shipment.png" />
+    <None Remove="Statics\Images\img_transaction.png" />
+    <None Remove="Statics\Images\order_page.png" />
+    <None Remove="Statics\Images\product_page.png" />
+    <None Remove="Statics\Images\setting_page.png" />
+    <None Remove="Statics\Images\shipment_page.png" />
+    <None Remove="Statics\Images\shutdown_def.png" />
+    <None Remove="Statics\Images\shutdown_mo.png" />
+    <None Remove="Statics\Images\transaction_page.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Statics\Fonts\Rubik-Medium.ttf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Statics\Fonts\Rubik-Regular.ttf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Statics\Images\customer_page.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Statics\Images\home_page.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Statics\Images\img_customer.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Statics\Images\img_home.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Statics\Images\img_order.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Statics\Images\img_product.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Statics\Images\img_setting.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Statics\Images\img_shipment.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Statics\Images\img_transaction.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Statics\Images\order_page.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Statics\Images\product_page.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Statics\Images\setting_page.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Statics\Images\shipment_page.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Statics\Images\shutdown_def.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Statics\Images\shutdown_mo.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Statics\Images\transaction_page.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,65 @@
+﻿<Window x:Class="PageNavigationDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PageNavigationDemo" 
+        xmlns:models="clr-namespace:PageNavigationDemo.Models" 
+        xmlns:view="clr-namespace:PageNavigationDemo.Views" 
+        d:DataContext="{d:DesignInstance Type=models:NavigationVM}"
+        mc:Ignorable="d"
+        AllowsTransparency="True"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        Background="Transparent"
+        Title="MainWindow" Height="600" Width="850">
+    <Grid>
+        <Border Background="#212529" CornerRadius="20" />
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="228"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid HorizontalAlignment="Left" Width="228">
+                <Border Background="#272B2F" CornerRadius="20,0,0,20" />
+                <StackPanel Height="400" ButtonBase.Click="StackPanel_Click" Width="228">
+                    <local:Btn Style="{StaticResource NaviBtn}" x:Name="Home" Tag="/Statics/Images/img_home.png" Content="Home" IsChecked="True"/>
+                    <local:Btn Style="{StaticResource NaviBtn}" Tag="/Statics/Images/img_customer.png" Content="Customers" x:Name="Customer"/>
+                    <local:Btn Style="{StaticResource NaviBtn}" Tag="/Statics/Images/img_product.png" Content="Products" x:Name="Products"/>
+                    <local:Btn Style="{StaticResource NaviBtn}" Tag="/Statics/Images/img_order.png" Content="Orders" x:Name="Orders"/>
+                    <local:Btn Style="{StaticResource NaviBtn}" Tag="/Statics/Images/img_transaction.png" Content="Transactions" x:Name="Transactions"/>
+                    <local:Btn Style="{StaticResource NaviBtn}" Tag="/Statics/Images/img_shipment.png" Content="Shipments" x:Name="Shipments"/>
+                    <local:Btn Style="{StaticResource NaviBtn}" Tag="/Statics/Images/img_setting.png" Content="Settings" x:Name="Settings"/>
+                </StackPanel>
+            </Grid>
+            <Grid Grid.Column="1">
+                <ContentControl x:Name="Pages" Content="{Binding CurrentView}">
+                    <ContentControl.Resources>
+                        <DataTemplate DataType="{x:Type models:HomeVM}">
+                            <view:Home />
+                        </DataTemplate>
+                        <DataTemplate DataType="{x:Type models:CustomerVM}">
+                            <view:Customers />
+                        </DataTemplate>
+                        <DataTemplate DataType="{x:Type models:ProductVM}">
+                            <view:Products />
+                        </DataTemplate>
+                        <DataTemplate DataType="{x:Type models:OrderVM}">
+                            <view:Orders />
+                        </DataTemplate>
+                        <DataTemplate DataType="{x:Type models:TransactionVM}">
+                            <view:Transactions />
+                        </DataTemplate>
+                        <DataTemplate DataType="{x:Type models:ShipmentVM}">
+                            <view:Shipments />
+                        </DataTemplate>
+                        <DataTemplate DataType="{x:Type models:SettingVM}">
+                            <view:Settings />
+                        </DataTemplate>
+                    </ContentControl.Resources>
+                </ContentControl>
+            </Grid>
+        </Grid>
+        <Button x:Name="CloseApp" Style="{StaticResource ExitApp}" Click="CloseApp_Click" />
+    </Grid>
+</Window>
